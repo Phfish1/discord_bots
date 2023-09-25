@@ -19,6 +19,6 @@ async def download_song(link):
     yt = pytube.YouTube(link)
     yt.streams.get_audio_only().download(output_path="command_bot/songs")
 
-    return str(yt.title)
+    return yt
 
 
